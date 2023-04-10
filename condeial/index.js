@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const PORT = 8080;
 
+app.set("view engine", "ejs");
+app.set("views", "./views");
+
 app.use("/", require("./routes"));
 
 app.listen(PORT, (err) => {
