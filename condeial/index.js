@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const PORT = 8080;
 
-app.get("/", require("./routes"));
+app.use("/", require("./routes"));
 
 app.listen(PORT, (err) => {
   if (err) {
